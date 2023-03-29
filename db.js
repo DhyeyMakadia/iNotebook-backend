@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const mongoURI = 'mongodb://127.0.0.1:27017/inotebook'
+require('dotenv').config()
+const mongoURI = `mongodb+srv://${process.env.User}:${process.env.Password}@portfolio-db.tnaiwac.mongodb.net/inotebook`
 
 const connectToMongo = () => {
     mongoose.connect(mongoURI,()=>{
